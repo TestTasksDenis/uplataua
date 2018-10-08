@@ -19,7 +19,6 @@ $icons-folder: "../../icons";
 
 $fonts-folder: "../../assets/fonts";
 $font1: "Lato";
-$font2: "Existence";
 
 $fonts:(
   Lato-Hairline: ($font1, "#{$fonts-folder}/#{$font1}/Hairline/#{$font1}-Hairline", 100, normal),
@@ -31,8 +30,7 @@ $fonts:(
   Lato-Semibold: ($font1, "#{$fonts-folder}/#{$font1}/Semibold/#{$font1}-Semibold", 600, normal),
   Lato-Bold: ($font1, "#{$fonts-folder}/#{$font1}/Bold/#{$font1}-Bold", 700, normal),
   Lato-Heavy: ($font1, "#{$fonts-folder}/#{$font1}/Heavy/#{$font1}-Heavy", 800, normal),
-  Lato-Black: ($font1, "#{$fonts-folder}/#{$font1}/Black/#{$font1}-Black", 900, normal),
-  Existence-Light: ($font2, "#{$fonts-folder}/#{$font2}/Light/#{$font2}-Light", 300, normal),
+  Lato-Black: ($font1, "#{$fonts-folder}/#{$font1}/Black/#{$font1}-Black", 900, normal)
 );
 
 $font-family-default      : $font1;
