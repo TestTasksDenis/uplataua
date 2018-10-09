@@ -6,6 +6,10 @@ import { AppRoutesModule } from './app-routes.module';
 
 import { AppComponent } from './app.component';
 
+import { HttpService } from './shared/services/http.service';
+import { StaticService } from './shared/services/static.service';
+import { CategoryService } from './shared/services/category.service';
+
 @NgModule({
   declarations: [
     AppComponent
@@ -15,7 +19,11 @@ import { AppComponent } from './app.component';
     AppRoutesModule,
     SharedModule
   ],
-  providers: [],
+  providers: [
+    HttpService,
+    StaticService,
+    CategoryService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

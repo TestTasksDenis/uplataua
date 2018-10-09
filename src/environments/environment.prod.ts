@@ -1,4 +1,5 @@
 export const environment = {
   production: true,
-  serverDomain : 'http://localhost:4000/'
+  siteDomain: 'http://localhost:4000',
+  serverDomain : 'http://localhost:3000'
 };

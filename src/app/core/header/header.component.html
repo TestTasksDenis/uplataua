@@ -1,3 +1,23 @@
-<p>
-  header works!
-</p>
+<header class="header">
+  <div class="header__logo">
+    <a routerLink="/">
+      <img src="https://uplata.ua/front/index/img/logo.svg" alt="UplataUA">
+    </a>
+  </div>
+  <nav class="header__nav">
+    <ul>
+      <li class="header__nav-services" #services>
+        <div class="header__nav-label">Все услуги</div>
+        <div class="header__nav-dropdown">
+          <ul>
+            <li *ngFor="let item of menuCategories">
+              <div class="header__nav-icon header__nav-icon--{{ item.url }}"></div>
+              <a routerLink="{{ siteDomain + '/' + item.url }}">{{ item.title }}</a>
+            </li>
+          </ul>
+        </div>
+      </li>
+      <li *ngFor="let item of menuItems"><a routerLink="{{ siteDomain + '/' + item.url }}">{{ item.title }}</a></li>
+    </ul>
+  </nav>
+</header>

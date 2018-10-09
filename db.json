@@ -55,5 +55,32 @@
       "title": "Другие услуги",
       "url": "drugie-uslugi"
     }
+  ],
+  "static": [
+    {
+      "id": 1,
+      "title": "О нас",
+      "url": "onas"
+    },
+    {
+      "id": 2,
+      "title": "FAQ или часто задаваемые вопросы",
+      "url": "faq"
+    },
+    {
+      "id": 3,
+      "title": "Тарифы",
+      "url": "tarif"
+    },
+    {
+      "id": 4,
+      "title": "Безопасность",
+      "url": "bezopasnost"
+    },
+    {
+      "id": 5,
+      "title": "Правова інформація",
+      "url": "legal"
+    }
   ]
 }

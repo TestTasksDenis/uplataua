@@ -3,30 +3,29 @@ import { HttpClient } from '@angular/common/http';
 import { environment } from '../../../environments/environment';
 
 @Injectable()
-export class HttpCallService {
+export class HttpService {
   link = environment.serverDomain;
 
-  constructor(private httpClient: HttpClient) {}
+  constructor(private _httpClient: HttpClient) {}
 
   public call(method: string, postfixLink: string, params?: any) {
-    let resultCall;
+    let resultCall = null;
 
     switch (method) {
       case 'GET':
-        resultCall = this.httpClient.get(this.link + postfixLink);
+        resultCall = this._httpClient.get(this.link + postfixLink);
         break;
       case 'POST':
-        resultCall = this.httpClient.post(this.link + postfixLink, params);
+        resultCall = this._httpClient.post(this.link + postfixLink, params);
         break;
       case 'DELETE':
-        resultCall = this.httpClient.delete(this.link + postfixLink);
+        resultCall = this._httpClient.delete(this.link + postfixLink);
         break;
       case 'PUT':
-        resultCall = this.httpClient.put(this.link + postfixLink, JSON.stringify(params));
+        resultCall = this._httpClient.put(this.link + postfixLink, JSON.stringify(params));
         break;
       default:
         console.log('unknown method: ' + method);
-        resultCall = false;
     }
     return resultCall;
   }

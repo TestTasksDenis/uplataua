@@ -1,0 +1,127 @@
+.header {
+  background: #4f5467;
+  box-shadow: 0 2px 10px 0 rgba(58, 63, 81, .8);
+  display: flex;
+  align-items: center;
+
+  .header__logo {
+    margin-right: 25px;
+  }
+
+  .header__nav {
+    ul {
+      list-style: none;
+      display: flex;
+
+      li {
+        margin-right: 20px;
+        position: relative;
+
+        .header__nav-label,
+        a {
+          color: #fff;
+          text-transform: uppercase;
+          font-weight: 600;
+          letter-spacing: 0.5px;
+          line-height: 70px;
+          display: block;
+          padding: 0 25px;
+        }
+
+        a {
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+
+        .header__nav-dropdown {
+          position: absolute;
+          top: 70px;
+          left: 0;
+          background: #fbfbfc none repeat scroll 0 0;
+          box-shadow: 0 2px 10px 0 rgba(79, 84, 103, .2);
+          padding: 15px 25px;
+          transition: all 0.4s;
+          opacity: 0;
+          visibility: hidden;
+
+          ul {
+            flex-direction: column;
+
+            li {
+              margin-bottom: 8px;
+              display: flex;
+              align-items: center;
+              margin-right: 0;
+
+              .header__nav-icon {
+                width: 35px;
+                height: 35px;
+                background: url("./img/sprite-ic-payment.svg") no-repeat;
+                margin-right: 10px;
+
+                &.header__nav-icon--oplata-kommunalnyh-uslug {
+                  background-position: -40px 0;
+                }
+
+                &.header__nav-icon--hosting-i-domennye-imena {
+                  background-position: -80px 0;
+                }
+
+                &.header__nav-icon--ip-i-domashnyaya-telefoniya {
+                  background-position: -120px 0;
+                }
+
+                &.header__nav-icon--internet-i-televidenie {
+                  background-position: -160px 0;
+                }
+                &.header__nav-icon--banki-i-finansovye-uslugi {
+                  background-position: -200px 0;
+                }
+                &.header__nav-icon--igry-i-socseti {
+                  background-position: -241px 0;
+                }
+                &.header__nav-icon--shtrafy-za-narushenie-pdd {
+                  background-position: -281px 0;
+                }
+                &.header__nav-icon--blagotvoritelnost {
+                  background-position: -320px 0;
+                }
+                &.header__nav-icon--distribuciya-i-skidochnye-kupony {
+                  background-position: -361px 0;
+                }
+                &.header__nav-icon--drugie-uslugi {
+                  background-position: -401px 0;
+                }
+              }
+
+              a {
+                white-space: nowrap;
+                text-transform: none;
+                color: #000;
+                line-height: normal;
+              }
+
+              &:last-child {
+                margin-bottom: 0;
+              }
+            }
+          }
+        }
+
+        &.header__nav-services:hover {
+          background: linear-gradient(rgba(79, 84, 103, .4), #3f4354);
+
+          .header__nav-dropdown {
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
