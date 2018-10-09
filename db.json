@@ -1,0 +1,59 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "title": "Пополнить мобильный",
+      "url": "popolnit-mobilnyy"
+    },
+    {
+      "id": 2,
+      "title": "Оплата коммунальных услуг",
+      "url": "oplata-kommunalnyh-uslug"
+    },
+    {
+      "id": 3,
+      "title": "Хостинг и доменные имена",
+      "url": "hosting-i-domennye-imena"
+    },
+    {
+      "id": 4,
+      "title": "IP- и домашняя телефония",
+      "url": "ip-i-domashnyaya-telefoniya"
+    },
+    {
+      "id": 5,
+      "title": "Интернет и телевидение",
+      "url": "internet-i-televidenie"
+    },
+    {
+      "id": 6,
+      "title": "Банки и финансовые услуги",
+      "url": "banki-i-finansovye-uslugi"
+    },
+    {
+      "id": 7,
+      "title": "Игры и соцсети",
+      "url": "igry-i-socseti"
+    },
+    {
+      "id": 8,
+      "title": "Штрафы за нарушение ПДД",
+      "url": "shtrafy-za-narushenie-pdd"
+    },
+    {
+      "id": 9,
+      "title": "Благотворительность",
+      "url": "blagotvoritelnost"
+    },
+    {
+      "id": 10,
+      "title": "Дистрибуция и скидочные купоны",
+      "url": "distribuciya-i-skidochnye-kupony"
+    },
+    {
+      "id": 11,
+      "title": "Другие услуги",
+      "url": "drugie-uslugi"
+    }
+  ]
+}
