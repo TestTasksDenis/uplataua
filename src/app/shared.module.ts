@@ -10,13 +10,17 @@ import { AuthInterceptor } from './shared/services/auth.interceptor';
 import { HeaderComponent } from './core/header/header.component';
 import { FooterComponent } from './core/footer/footer.component';
 import { InsideComponent } from './core/layouts/inside/inside.component';
+import { SidebarComponent } from './core/layouts/sidebar/sidebar.component';
+import { NotFoundComponent } from './core/layouts/not-found/not-found.component';
 
 @NgModule({
   exports: [
     ReactiveFormsModule,
     HeaderComponent,
     FooterComponent,
-    InsideComponent
+    InsideComponent,
+    SidebarComponent,
+    NotFoundComponent
   ],
   imports: [
     CommonModule,
@@ -28,7 +32,9 @@ import { InsideComponent } from './core/layouts/inside/inside.component';
   declarations: [
     HeaderComponent,
     FooterComponent,
-    InsideComponent
+    InsideComponent,
+    SidebarComponent,
+    NotFoundComponent
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
