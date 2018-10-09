@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { StaticInterface } from '../../shared/interfaces/static.interface';
 import { StaticService } from '../../shared/services/static.service';
+import { NavigationStart, Router } from '@angular/router';
 import { takeWhile } from 'rxjs/operators';
 
 @Component({
@@ -9,15 +9,23 @@ import { takeWhile } from 'rxjs/operators';
   styleUrls: ['./static.component.scss']
 })
 export class StaticComponent implements OnInit, OnDestroy {
-  staticPages: StaticInterface[];
+  currentPage = {};
   private _alive = true;
 
-  constructor(private _staticService: StaticService) { }
+  constructor(private _staticService: StaticService, private _router: Router) {}
 
   ngOnInit() {
-    this._staticService.staticPages
+    this._staticService.getStaticByUrl(this._router.url)
       .pipe(takeWhile(() => this._alive))
-      .subscribe((data: StaticInterface[]) => this.staticPages = data);
+      .subscribe(data => this.currentPage = data[0]);
+
+    this._router.events.subscribe(event => {
+      if (event instanceof NavigationStart) {
+        this._staticService.getStaticByUrl(event.url)
+          .pipe(takeWhile(() => this._alive))
+          .subscribe(data => this.currentPage = data[0]);
+      }
+    });
   }
 
   ngOnDestroy() {

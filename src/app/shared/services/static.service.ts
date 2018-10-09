@@ -10,4 +10,9 @@ export class StaticService {
   get staticPages(): Observable<StaticInterface[]> {
     return this._httpService.call('GET', '/static');
   }
+
+  getStaticByUrl(url: string): Observable<StaticInterface> {
+    url = url.slice(1);
+    return this._httpService.call('GET', `/static?url=${url}`);
+  }
 }

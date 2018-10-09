@@ -10,4 +10,8 @@ export class CategoryService {
   get categories(): Observable<CategoryInterface[]> {
     return this._httpService.call('GET', '/categories');
   }
+
+  getCategoryByUrl(url: string) {
+
+  }
 }

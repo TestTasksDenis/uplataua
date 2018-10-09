@@ -2,7 +2,6 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { StaticInterface } from '../../shared/interfaces/static.interface';
 import { StaticService } from '../../shared/services/static.service';
 import { takeWhile } from 'rxjs/operators';
-import { environment } from '../../../environments/environment';
 import { CategoryInterface } from '../../shared/interfaces/category.interface';
 import { CategoryService } from '../../shared/services/category.service';
 
@@ -14,7 +13,6 @@ import { CategoryService } from '../../shared/services/category.service';
 export class HeaderComponent implements OnInit, OnDestroy {
   menuItems: StaticInterface[];
   menuCategories: CategoryInterface[];
-  siteDomain = environment.siteDomain;
   private _alive = {
     static: true,
     category: true

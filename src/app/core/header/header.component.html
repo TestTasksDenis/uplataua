@@ -12,12 +12,12 @@
           <ul>
             <li *ngFor="let item of menuCategories">
               <div class="header__nav-icon header__nav-icon--{{ item.url }}"></div>
-              <a routerLink="{{ siteDomain + '/' + item.url }}">{{ item.title }}</a>
+              <a routerLink="/categories/{{ item.url }}">{{ item.title }}</a>
             </li>
           </ul>
         </div>
       </li>
-      <li *ngFor="let item of menuItems"><a routerLink="{{ siteDomain + '/' + item.url }}">{{ item.title }}</a></li>
+      <li *ngFor="let item of menuItems"><a routerLink="/{{ item.url }}">{{ item.title }}</a></li>
     </ul>
   </nav>
 </header>

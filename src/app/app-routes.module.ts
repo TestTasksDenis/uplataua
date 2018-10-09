@@ -7,7 +7,7 @@ const AppRouter: Routes = [
   {
     path: '', component: InsideComponent, children: [
       {
-        path: '', pathMatch: 'full', loadChildren: './modules/static/static.module#StaticModule'
+        path: ':url', pathMatch: 'full', loadChildren: './modules/static/static.module#StaticModule'
       }
     ]
   }
