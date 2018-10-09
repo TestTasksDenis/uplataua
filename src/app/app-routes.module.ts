@@ -7,10 +7,13 @@ const AppRouter: Routes = [
   {
     path: '', component: InsideComponent, children: [
       {
-        path: ':url', pathMatch: 'full', loadChildren: './modules/static/static.module#StaticModule'
+        path: ':url', loadChildren: './modules/static/static.module#StaticModule'
+      },
+      {
+        path: '', pathMatch: 'full', loadChildren: './modules/home/home.module#HomeModule'
       }
-    ]
-  }
+    ],
+  },
 ];
 
 @NgModule({
