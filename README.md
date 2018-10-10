@@ -23,7 +23,10 @@
 
 PS. Дизайн не важен, важна логика построения архитектуры
 
-# Uplataua
+#P.S
+- 500 ошибка выводится в интерсепторе `uplataua/src/app/shared/services/auth.interceptor.ts`
+
+# About Angular
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.5.
 

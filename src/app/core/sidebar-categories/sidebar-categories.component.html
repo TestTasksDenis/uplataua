@@ -1,3 +1,10 @@
-<p>
-  sidebar-categories works!
-</p>
+<div class="sidebar">
+  <nav>
+    <ul>
+      <li *ngFor="let item of menuCategories">
+        <div class="sidebar__nav-icon sidebar__nav-icon--{{ item.url }}"></div>
+        <a routerLink="/category/{{ item.url }}">{{ item.title }}</a>
+      </li>
+    </ul>
+  </nav>
+</div>

@@ -23,11 +23,13 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss",
+              "src/libs/modal/modal.css",
               "src/libs/framework/framework.scss",
               "src/libs/normalize/normalize.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "src/libs/modal/modal.js"
+            ]
           },
           "configurations": {
             "production": {

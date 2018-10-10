@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { HttpService } from './shared/services/http.service';
 import { StaticService } from './shared/services/static.service';
 import { CategoryService } from './shared/services/category.service';
+import { AuthGuard } from './shared/services/auth-guard.service';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { CategoryService } from './shared/services/category.service';
   providers: [
     HttpService,
     StaticService,
-    CategoryService
+    CategoryService,
+    AuthGuard
   ],
   bootstrap: [AppComponent]
 })

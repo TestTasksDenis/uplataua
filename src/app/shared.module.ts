@@ -12,6 +12,7 @@ import { FooterComponent } from './core/footer/footer.component';
 import { InsideComponent } from './core/layouts/inside/inside.component';
 import { SidebarComponent } from './core/layouts/sidebar/sidebar.component';
 import { NotFoundComponent } from './core/layouts/not-found/not-found.component';
+import { ModalsComponent } from './core/modals/modals.component';
 
 @NgModule({
   exports: [
@@ -20,7 +21,8 @@ import { NotFoundComponent } from './core/layouts/not-found/not-found.component'
     FooterComponent,
     InsideComponent,
     SidebarComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    ModalsComponent
   ],
   imports: [
     CommonModule,
@@ -34,7 +36,8 @@ import { NotFoundComponent } from './core/layouts/not-found/not-found.component'
     FooterComponent,
     InsideComponent,
     SidebarComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    ModalsComponent
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }

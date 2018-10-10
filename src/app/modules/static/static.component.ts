@@ -9,7 +9,9 @@ import { takeWhile } from 'rxjs/operators';
   styleUrls: ['./static.component.scss']
 })
 export class StaticComponent implements OnInit, OnDestroy {
-  currentPage = {};
+  currentPage = {
+    title: ''
+  };
   private _alive = true;
 
   constructor(private _staticService: StaticService, private _router: Router) {}
@@ -17,7 +19,7 @@ export class StaticComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this._staticService.getStaticByUrl(this._router.url)
       .pipe(takeWhile(() => this._alive))
-      .subscribe(data => this.currentPage = data[0]);
+      .subscribe(data => (!data[0]) ? this._router.navigate(['/404']) : this.currentPage = data[0]);
 
     this._router.events.subscribe(event => {
       if (event instanceof NavigationStart) {

@@ -1,0 +1,71 @@
+.sidebar {
+  background: #fff none repeat scroll 0 0;
+  box-shadow: 2px 0 8px 0 rgba(181, 182, 186, .16);
+  width: 370px;
+  padding: 20px;
+  margin-right: 30px;
+
+  ul {
+    list-style: none;
+
+    li {
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid #f4f6f8;
+
+      .sidebar__nav-icon {
+        width: 35px;
+        height: 35px;
+        background: url("./img/sprite-ic-payment.svg") no-repeat;
+        margin-right: 20px;
+
+        &.sidebar__nav-icon--oplata-kommunalnyh-uslug {
+          background-position: -40px 0;
+        }
+
+        &.sidebar__nav-icon--hosting-i-domennye-imena {
+          background-position: -80px 0;
+        }
+
+        &.sidebar__nav-icon--ip-i-domashnyaya-telefoniya {
+          background-position: -120px 0;
+        }
+
+        &.sidebar__nav-icon--internet-i-televidenie {
+          background-position: -160px 0;
+        }
+        &.sidebar__nav-icon--banki-i-finansovye-uslugi {
+          background-position: -200px 0;
+        }
+        &.sidebar__nav-icon--igry-i-socseti {
+          background-position: -241px 0;
+        }
+        &.sidebar__nav-icon--shtrafy-za-narushenie-pdd {
+          background-position: -281px 0;
+        }
+        &.sidebar__nav-icon--blagotvoritelnost {
+          background-position: -320px 0;
+        }
+        &.sidebar__nav-icon--distribuciya-i-skidochnye-kupony {
+          background-position: -361px 0;
+        }
+        &.sidebar__nav-icon--drugie-uslugi {
+          background-position: -401px 0;
+        }
+      }
+
+      a {
+        line-height: 60px;
+        align-items: center;
+        color: #242424;
+        display: flex;
+        justify-content: space-between;
+        text-decoration: none;
+
+        &:hover {
+          color: #FD8247;
+        }
+      }
+    }
+  }
+}

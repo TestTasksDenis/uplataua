@@ -20,4 +20,8 @@
       <li *ngFor="let item of menuItems"><a routerLink="/{{ item.url }}">{{ item.title }}</a></li>
     </ul>
   </nav>
+  <div class="header__modals">
+    <button type="button" class="modal-trigger" data-modal="1">Регистрация</button>
+    <button type="button" class="modal-trigger" data-modal="2">Авторизация</button>
+  </div>
 </header>

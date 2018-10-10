@@ -1,0 +1,19 @@
+<div class="modal">
+  <div class="modal-window" data-modal="1">
+    <h3>Регистрация</h3>
+    <form class="form" [formGroup]="formEnter" (submit)="onSubmitEnter()">
+      <input class="form__field" type="text" placeholder="Вход" formControlName="enterName">
+      <input class="form__field" type="password" placeholder="Пароль" formControlName="enterPass">
+      <input class="form__submit" type="submit" value="Вход" [disabled]="formEnter.invalid">
+    </form>
+  </div>
+  <div class="modal-window" data-modal="2">
+    <h3>Вход</h3>
+    <form class="form" [formGroup]="formReg" (submit)="onSubmitReg()">
+      <input class="form__field" type="email" placeholder="Ваша почта" formControlName="regMail">
+      <input class="form__field" type="text" placeholder="Ваше имя" formControlName="regName">
+      <input class="form__field" type="password" placeholder="Пароль" formControlName="regPass">
+      <input class="form__submit" type="submit" value="Вход" [disabled]="formReg.invalid">
+    </form>
+  </div>
+</div>

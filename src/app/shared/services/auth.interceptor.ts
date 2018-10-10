@@ -1,6 +1,7 @@
-import { HttpRequest, HttpEvent, HttpHandler, HttpInterceptor } from '@angular/common/http';
+import { HttpRequest, HttpEvent, HttpHandler, HttpInterceptor, HttpResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { tap, finalize } from 'rxjs/operators';
 
 @Injectable()
 export class AuthInterceptor implements HttpInterceptor {
@@ -8,9 +9,17 @@ export class AuthInterceptor implements HttpInterceptor {
     intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
         const copiedAuthRequest = req.clone({
             // setHeaders: {
-            //     Authorization: `Some cool token`
+            //     Authorization: `Bareer token`
             // }
         });
-        return next.handle(copiedAuthRequest);
+        return next.handle(copiedAuthRequest).pipe(
+          tap(
+            event => (event instanceof HttpResponse) ? 'succeeded' : 'error',
+            error => console.log(error)
+          ),
+          finalize(() => {
+            // console.log(`${req.method} "${req.urlWithParams}"`);
+          })
+        );
     }
 }
